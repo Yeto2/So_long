@@ -6,7 +6,7 @@
 /*   By: yessemna <yessemna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 23:58:07 by yessemna          #+#    #+#             */
-/*   Updated: 2024/02/09 22:03:14 by yessemna         ###   ########.fr       */
+/*   Updated: 2024/02/12 17:16:48 by yessemna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,15 +44,6 @@ int	helper(t_data *obj, int px, int py)
 	if (obj->collectible + 1 != count_itmes)
 		error_msg("Elements are not reachable", obj, 1);
 	return (1);
-}
-
-void	check_ext(t_data *obj)
-{
-	char	*ext;
-
-	ext = strchr(obj->path, '.');
-	if (ext[0] != '.' || ext[1] != 'b' || ext[2] != 'e' || ext[3] != 'r')
-		error_msg("Map file extension is not .ber", obj, 1);
 }
 
 void	free_map(t_data *data)

@@ -6,7 +6,7 @@
 /*   By: yessemna <yessemna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/07 04:54:43 by yessemna          #+#    #+#             */
-/*   Updated: 2024/02/09 21:39:15 by yessemna         ###   ########.fr       */
+/*   Updated: 2024/02/11 04:48:08 by yessemna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -108,7 +108,7 @@ int	main(int ac, char **av)
 	if (ac == 2)
 		load_map(&data, av[1]);
 	else
-		error_msg("More than two arguments", &data, 0);
+		error_msg("Two arguments required", &data, 0);
 	data.mlx_ptr = mlx_init();
 	if (!data.mlx_ptr)
 		error_msg("Failed to create mlx pointer", &data, 0);

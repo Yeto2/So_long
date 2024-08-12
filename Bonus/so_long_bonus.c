@@ -6,7 +6,7 @@
 /*   By: yessemna <yessemna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/07 04:54:43 by yessemna          #+#    #+#             */
-/*   Updated: 2024/02/09 22:51:22 by yessemna         ###   ########.fr       */
+/*   Updated: 2024/02/12 17:17:13 by yessemna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,10 +91,8 @@ void	ac_load(int ac, char *av, t_data *data, t_img *img)
 	if (ac == 2)
 		load_map(data, av);
 	else
-		error_msg("More than two arguments", data, 0);
+		error_msg("Two arguments required", data, 0);
 }
-
-// void f(){system("leaks so_long");}
 
 int	main(int ac, char **av)
 {

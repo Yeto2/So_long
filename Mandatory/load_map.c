@@ -6,7 +6,7 @@
 /*   By: yessemna <yessemna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/21 03:58:35 by yessemna          #+#    #+#             */
-/*   Updated: 2024/02/09 06:20:19 by yessemna         ###   ########.fr       */
+/*   Updated: 2024/02/12 17:15:12 by yessemna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,17 +73,19 @@ int	load_map(t_data *obj, char *path)
 	int		j;
 	int		k;
 	t_img	img;
+	int		fd;
 
 	j = 0;
 	k = 0;
 	obj->path = path;
-	if (open(obj->path, O_RDONLY) == -1)
+	fd = open(obj->path, O_RDONLY);
+	if (read(fd, "", 0) == -1)
 	{
 		error_msg("Map file not found", obj, 0);
 		destroy_images_window(&img, obj);
+		close(fd);
 		exit(0);
 	}
-	check_ext(obj);
 	map_w_h(obj);
 	fill_map_lines(obj);
 	return (1);

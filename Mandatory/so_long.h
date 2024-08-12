@@ -6,7 +6,7 @@
 /*   By: yessemna <yessemna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/07 19:36:42 by yessemna          #+#    #+#             */
-/*   Updated: 2024/02/09 21:49:57 by yessemna         ###   ########.fr       */
+/*   Updated: 2024/02/12 17:17:43 by yessemna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,7 +75,6 @@ void	set_items(t_data *data, int n);
 int		load_map(t_data *obj, char *path);
 int		exit_press(t_game *game);
 void	error_msg(char *msg, t_data *obj, int n);
-void	check_ext(t_data *obj);
 void	init_vars(t_data *data);
 void	init_img(t_img *img, t_data *data);
 void	flood_fill(t_data *obj, int i, int j, int *count_itmes);

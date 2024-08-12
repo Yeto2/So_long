@@ -6,7 +6,7 @@
 #    By: yessemna <yessemna@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/13 21:56:01 by yessemna          #+#    #+#              #
-#    Updated: 2024/02/09 23:12:14 by yessemna         ###   ########.fr        #
+#    Updated: 2024/02/11 21:59:33 by yessemna         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -37,7 +37,10 @@ $(NAME): $(OBJ)
 $(NAME_B): $(OBJ_B)
 	@$(CC) $(CFLAGS) $(OBJ_B) -o $(NAME_B) -lmlx -framework OpenGL -framework AppKit
 
-%.o: %.c so_long.h so_long_bonus.h
+./Mandatory/%.o: ./Mandatory/%.c ./Mandatory/so_long.h
+	@$(CC) $(CFLAGS) -o $@ -c $<
+	
+./Bonus/%.o: ./Bonus/%.c ./Bonus/so_long_bonus.h
 	@$(CC) $(CFLAGS) -o $@ -c $<
 
 all: $(NAME)
